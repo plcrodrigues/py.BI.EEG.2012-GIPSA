@@ -1,0 +1,9 @@
+README.md
+setup.py
+braininvaders2012/__init__.py
+braininvaders2012/dataset.py
+braininvaders2012/download.py
+braininvaders2012.egg-info/PKG-INFO
+braininvaders2012.egg-info/SOURCES.txt
+braininvaders2012.egg-info/dependency_links.txt
+braininvaders2012.egg-info/top_level.txt
