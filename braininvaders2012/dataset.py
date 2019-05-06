@@ -59,7 +59,7 @@ class BrainInvaders2012():
             stim = (X[18,:] + X[19,:])[None,:]
             X = np.concatenate([S, stim])
 
-            info = mne.create_info(ch_names=chnames, sfreq=512,
+            info = mne.create_info(ch_names=chnames, sfreq=128,
                                    ch_types=chtypes, montage='standard_1020',
                                    verbose=False)
             raw = mne.io.RawArray(data=X, info=info, verbose=False)

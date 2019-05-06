@@ -40,21 +40,22 @@ for subject in dataset.subject_list:
 	fmin = 1
 	fmax = 24
 	raw.filter(fmin, fmax, verbose=False)
-	raw.resample(sfreq=128, verbose=False)
 
 	# detect the events and cut the signal into epochs
 	events = mne.find_events(raw=raw, shortest_event=1, verbose=False)
 	event_id = {'NonTarget': 1, 'Target': 2}
-	epochs = mne.Epochs(raw, events, event_id, tmin=0.0, tmax=0.6, baseline=None, verbose=False)
+	epochs = mne.Epochs(raw, events, event_id, tmin=0.0, tmax=1.0, baseline=None, verbose=False, preload=True)
+	epochs.pick_types(eeg=True)
 
 	# get trials and labels
 	X = epochs.get_data()
 	y = events[:, -1]
+	y = LabelEncoder().fit_transform(y)
 
 	# cross validation
 	skf = StratifiedKFold(n_splits=5)
-	clf = make_pipeline(ERPCovariances(estimator='lwf', classes=[1]), MDM())
-	scr[subject] = cross_val_score(clf, X, LabelEncoder().fit_transform(y), cv=skf, scoring='roc_auc').mean()
+	clf = make_pipeline(XdawnCovariances(estimator='lwf', classes=[1]), MDM())
+	scr[subject] = cross_val_score(clf, X, y, cv=skf, scoring='roc_auc').mean()
 
 	# print results of classification
 	print('subject', subject, 'session', session)
