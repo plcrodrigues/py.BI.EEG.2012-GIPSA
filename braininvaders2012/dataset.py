@@ -64,6 +64,10 @@ class BrainInvaders2012():
                                    verbose=False)
             raw = mne.io.RawArray(data=X, info=info, verbose=False)
 
+            # get rid of the Fz channel (it is the ground)
+            raw.info['bads'] = ['Fz']
+            raw.pick_types(eeg=True, stim=True)
+
             sessions[session_name] = {}
             sessions[session_name][run_name] = raw
 

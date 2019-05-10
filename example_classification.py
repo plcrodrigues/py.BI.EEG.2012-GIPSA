@@ -2,6 +2,7 @@
 from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.preprocessing import LabelEncoder
+from sklearn.externals import joblib
 from pyriemann.classification import MDM
 from pyriemann.estimation import XdawnCovariances, ERPCovariances
 from braininvaders2012.dataset import BrainInvaders2012
@@ -28,7 +29,7 @@ warnings.filterwarnings("ignore")
 # define the dataset instance
 dataset = BrainInvaders2012(Training=True)
 
-scr = {}
+scr = {}; scr_gnd = {}
 # get the data from subject of interest
 for subject in dataset.subject_list:
 
@@ -60,4 +61,11 @@ for subject in dataset.subject_list:
 	# print results of classification
 	print('subject', subject, 'session', session)
 	print('mean AUC :', scr[subject])
+
+	#####
+
+# filename = './results_comparison.pkl'
+# joblib.dump(scr, filename)	
+
+
 
