@@ -64,8 +64,8 @@ for subject in dataset.subject_list:
 
 	#####
 
-# filename = './results_comparison.pkl'
-# joblib.dump(scr, filename)	
+filename = './example_classification.pkl'
+joblib.dump(scr, filename)	
 
 
 
