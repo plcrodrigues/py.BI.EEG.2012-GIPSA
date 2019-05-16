@@ -33,7 +33,7 @@ class BrainInvaders2012():
     https://doi.org/10.5281/zenodo.2649006
  
     **Authors**
-    Principal Investigator: B.Sc. Gijsbrecht Franciscus Petrus van Veen
+    Principal Investigator: B.Sc. Gijsbrecht Franciscus Petrus Van Veen
     Technical Supervisors: Ph.D. Alexandre Barachant, Eng. Anton Andreev, Eng. Grégoire Cattan, Eng. Pedro. L. C. Rodrigues
     Scientific Supervisor: Ph.D. Marco Congedo
 
