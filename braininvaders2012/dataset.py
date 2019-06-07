@@ -14,7 +14,31 @@ BI2012a_URL = 'https://zenodo.org/record/2649069/files/'
 
 class BrainInvaders2012():
     '''
+    We describe the experimental procedures for a dataset that we have made publicly available at 
+    https://doi.org/10.5281/zenodo.2649006 in mat and csv formats. This dataset contains 
+    electroencephalographic (EEG) recordings of 25 subjects testing the Brain Invaders 
+    (Congedo, 2011), a visual P300 Brain-Computer Interface inspired by the famous vintage video 
+    game Space Invaders (Taito, Tokyo, Japan). The visual P300 is an event-related potential 
+    elicited by a visual stimulation, peaking 240-600 ms after stimulus onset. EEG data were recorded
+    by 16 electrodes in an experiment that took place in the GIPSA-lab, Grenoble, France, in 2012 
+    (Van Veen, 2013 and Congedo, 2013). A full description of the experiment is available 
+    https://hal.archives-ouvertes.fr/hal-02126068. Python code for manipulating the data is 
+    available at https://github.com/plcrodrigues/py.BI.EEG.2012-GIPSA.The ID of this dataset is
+    BI.EEG.2012-GIPSA.
 
+    **Full description of the experiment and dataset**
+    https://hal.archives-ouvertes.fr/hal-02126068
+
+    **Link to the data**
+    https://doi.org/10.5281/zenodo.2649006
+ 
+    **Authors**
+    Principal Investigator: B.Sc. Gijsbrecht Franciscus Petrus Van Veen
+    Technical Supervisors: Ph.D. Alexandre Barachant, Eng. Anton Andreev, Eng. Grégoire Cattan, Eng. Pedro. L. C. Rodrigues
+    Scientific Supervisor: Ph.D. Marco Congedo
+
+    **ID of the dataset**
+    BI.EEG.2012-GIPSA
     '''
 
     def __init__(self, Training=True, Online=False):
