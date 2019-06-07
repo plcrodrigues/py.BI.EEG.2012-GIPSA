@@ -29,13 +29,12 @@ warnings.filterwarnings("ignore")
 # define the dataset instance
 dataset = BrainInvaders2012(Training=True)
 
-scr = {}; scr_gnd = {}
+scr = {}
 # get the data from subject of interest
 for subject in dataset.subject_list:
 
 	data = dataset._get_single_subject_data(subject)
-	session = 1
-	raw = data['session_' + str(session)]['run_training']
+	raw = data['session_1']['run_training']
 
 	# filter data and resample
 	fmin = 1
@@ -59,12 +58,12 @@ for subject in dataset.subject_list:
 	scr[subject] = cross_val_score(clf, X, y, cv=skf, scoring='roc_auc').mean()
 
 	# print results of classification
-	print('subject', subject, 'session', session)
+	print('subject', subject)
 	print('mean AUC :', scr[subject])
 
 	#####
 
-filename = './example_classification.pkl'
+filename = './classification_scores.pkl'
 joblib.dump(scr, filename)	
 
 
