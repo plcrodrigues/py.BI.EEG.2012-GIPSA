@@ -4,7 +4,7 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.preprocessing import LabelEncoder
 from sklearn.externals import joblib
 from pyriemann.classification import MDM
-from pyriemann.estimation import XdawnCovariances, ERPCovariances
+from pyriemann.estimation import ERPCovariances
 from braininvaders2012.dataset import BrainInvaders2012
 from tqdm import tqdm
 import numpy as np
@@ -54,7 +54,7 @@ for subject in dataset.subject_list:
 
 	# cross validation
 	skf = StratifiedKFold(n_splits=5)
-	clf = make_pipeline(XdawnCovariances(estimator='lwf', classes=[1]), MDM())
+	clf = make_pipeline(ERPCovariances(estimator='lwf', classes=[1]), MDM())
 	scr[subject] = cross_val_score(clf, X, y, cv=skf, scoring='roc_auc').mean()
 
 	# print results of classification

@@ -7,7 +7,6 @@ from braininvaders2012 import download as dl
 import os
 import glob
 import zipfile
-import yaml
 from scipy.io import loadmat
 
 BI2012a_URL = 'https://zenodo.org/record/2649069/files/'
