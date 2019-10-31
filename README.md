@@ -2,7 +2,7 @@
 
 Repository with basic scripts for using the Brain Invaders 2012a dataset developed at GIPSA-lab. The dataset files and their documentation are all available at 
 
-...
+https://zenodo.org/record/2649069
 
 The code of this repository was developed in **Python 3** using MNE-Python [1, 2] as tool for the EEG processing.
 
