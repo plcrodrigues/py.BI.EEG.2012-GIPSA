@@ -54,7 +54,7 @@ class BrainInvaders2012():
         for file_path in file_path_list:
 
             session_name = 'session_1'
-            condition = file_path.split('_')[-1].split('.')[0].split(os.sep)[-1]
+            condition = file_path.split('/')[-1].split('.')[0].split(os.sep)[-1]
             run_name = 'run_' + condition
 
             chnames = ['F7',
@@ -108,7 +108,7 @@ class BrainInvaders2012():
         path_folder = path_zip.strip('subject_' + str(subject).zfill(2) + '.zip')
 
         # check if has to unzip
-        if not(os.path.isdir(path_folder + 'subject{:d}/'.format(subject))):
+        if not(os.path.isdir(path_folder + 'subject_{:d}/'.format(subject))) and not(os.path.isdir(path_folder + 'subject_0{:d}/'.format(subject))):
             print('unzip', path_zip)
             zip_ref = zipfile.ZipFile(path_zip, "r")
             zip_ref.extractall(path_folder)
