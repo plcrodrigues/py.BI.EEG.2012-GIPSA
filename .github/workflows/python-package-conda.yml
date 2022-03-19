@@ -21,9 +21,10 @@ jobs:
         # $CONDA is an environment variable pointing to the root of the miniconda directory
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
-      run: |
-        apt-get -y install build-essential
-        pip install -r requirements.txt
+      with: 
+         pre-build-command: |
+            apt-get -y install build-essential
+            pip install -r requirements.txt
     - name: Test examples
       run: |
         python classification_scores.py
