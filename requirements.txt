@@ -6,4 +6,3 @@ scipy==1.7.1
 matplotlib==3.4.3
 scikit_learn==0.23
 pandas==0.20.1
-joblib==1.0.1
