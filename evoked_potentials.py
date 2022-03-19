@@ -6,7 +6,7 @@ from pyriemann.estimation import XdawnCovariances, ERPCovariances
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.externals import joblib
+import joblib
 
 from braininvaders2012.dataset import BrainInvaders2012
 

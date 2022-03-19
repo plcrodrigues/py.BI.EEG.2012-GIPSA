@@ -2,13 +2,13 @@
 from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.preprocessing import LabelEncoder
-from sklearn.externals import joblib
 from pyriemann.classification import MDM
 from pyriemann.estimation import ERPCovariances
 from braininvaders2012.dataset import BrainInvaders2012
 from tqdm import tqdm
 import numpy as np
 import mne
+import joblib
 """
 =============================
 Classification of the trials

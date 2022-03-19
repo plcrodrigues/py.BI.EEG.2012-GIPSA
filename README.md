@@ -23,7 +23,7 @@ in your command line.
 Then, to ensure that your code finds the right scripts whenever you do `import braininvaders2012`, you should also do
 
 ```
-python setup.py develop # because no stable release yet
+python setup.py develop
 ```
 
 Note that you might want to create a *virtual environment* before doing all these installations (e.g. using Anaconda).
