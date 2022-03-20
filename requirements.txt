@@ -1,4 +1,4 @@
 mne==0.16.1
-pyriemann==0.2.6
+pyriemann==0.2.7
 setuptools==40.6.3
 matplotlib==3.4.3
