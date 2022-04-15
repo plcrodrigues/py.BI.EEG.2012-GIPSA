@@ -1,3 +1,9 @@
+# DEPRECATION NOTICE
+
+This dataset is now included in [moabb](https://github.com/NeuroTechX/moabb).
+Original pull request to moabb can be found [here](https://github.com/NeuroTechX/moabb/pull/283).
+This repository will only contains examples and sanity testing of the dataset.
+
 # Brain Invaders 2012 Dataset
 
 Repository with basic scripts for using the Brain Invaders 2012a dataset developed at GIPSA-lab. The dataset files and their documentation are all available at 
